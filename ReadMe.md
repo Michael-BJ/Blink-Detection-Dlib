@@ -74,3 +74,8 @@ leftEAR = calculate_EAR(leftEye)
 rightEAR = calculate_EAR(rightEye)
 EAR = (leftEAR + rightEAR) / 2.0
 ````
+
+# Demo
+
+Clik the picture to see the Video
+[![Watch the video](https://img.youtube.com/vi/pu1ot_mDYnc/maxresdefault.jpg)](https://youtu.be/pu1ot_mDYnc)
