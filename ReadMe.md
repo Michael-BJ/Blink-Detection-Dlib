@@ -28,14 +28,14 @@ detector = dlib.get_frontal_face_detector()
 ````
 predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat") 
 ````
-5. Calculate the coordinates for the vertical eye and horizontal eye (x,y)
+5. Calculate the coordinates/indexes for the vertical eye and horizontal eye (x,y)
 ````
 def calculate_EAR(eye):
 	A = dist.euclidean(eye[1], eye[5]) # for horizontal
 	B = dist.euclidean(eye[2], eye[4]) # for horizontal 
 	C = dist.euclidean(eye[0], eye[3]) # for vertikal
 ````
-6. Calculate the ratio of the eye using the coordinates that have been obtained
+6. Calculate the ratio of the eye using the coordinates/indexes that have been obtained
 ````
 EAR = (A + B) / (2.0 * C)`
 ````
@@ -58,7 +58,7 @@ gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 ````
 faces = detector(gray)
 ````
-11. Convert the coordinates of facial landmark to a numpy
+11. Convert the coordinates/indexes of facial landmark to a numpy
 ````
 point = predictor(gray, face)
 points = face_utils.shape_to_np(point)
